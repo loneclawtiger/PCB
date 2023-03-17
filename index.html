@@ -12,7 +12,7 @@
                 <label for="image" class="form-label">Select an image file</label>
                 <input type="file" class="form-control" id="image">
             </div>
-            <button type="submit" class="btn btn-primary">Process Image</button>
+            <button type="button" class="btn btn-primary" onclick="processimage()">Process Image</button>
         </form>
         <div class="mt-5 container">
             <div class="row">
@@ -24,6 +24,7 @@
                 </div>
                     <div class="col-md-6">
                     <h3>Processing Status</h3>
+                    <img id="processed" src="">
                     <p id="status">Please select an image file to begin processing.</p>
                 </div>
             </div>
@@ -45,6 +46,10 @@
                 reader.readAsDataURL(file);
                 status.innerText = 'Image selected, ready for processing.';
             });
+            function showimage(){
+                document.getElementById("processed").src="assets/img/m13.jpg";
+                document.getElementById("status").innerHTML="The processed image is ready.";
+            }
         </script>
     </body>
 </html>

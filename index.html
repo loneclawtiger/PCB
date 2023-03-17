@@ -23,9 +23,9 @@
                     </div>
                 </div>
                     <div class="col-md-6">
-                    <h3>Processing Status</h3>
-                    <img id="processed" src="">
-                    <p id="status">Please select an image file to begin processing.</p>
+                        <h3>Processing Status</h3>
+                        <p id="status">Please select an image file to begin processing.</p>
+                        <img id="processed" src="">
                 </div>
             </div>
         </div>
@@ -46,9 +46,9 @@
                 reader.readAsDataURL(file);
                 status.innerText = 'Image selected, ready for processing.';
             });
-            function showimage(){
-                document.getElementById("processed").src="assets/img/m13.jpg";
+            function processimage(){
                 document.getElementById("status").innerHTML="The processed image is ready.";
+                document.getElementById("processed").src="assets/img/m13.jpg";
             }
         </script>
     </body>
